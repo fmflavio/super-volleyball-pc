@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Volley Ball (Mega Drive / Genesis) - PC Windows Edition</title>
+  <style>
+    :root {
+      --bg-dark: #070d19;
+      --panel-bg: #0d182e;
+      --accent-gold: #fcfc00;
+      --accent-cyan: #00d8fc;
+      --accent-red: #d80000;
+      --text-light: #f4f7ff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+    body {
+      background: radial-gradient(circle at center, #112244 0%, #050a14 100%);
+      color: var(--text-light);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      max-width: 1120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: rgba(8, 16, 34, 0.92);
+      border-bottom: 2px solid #224488;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-md {
+      background: linear-gradient(135deg, #d80000, #800000);
+      color: #fff;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid #fcfc00;
+      letter-spacing: 0.8px;
+    }
+    .brand h1 {
+      font-size: 18px;
+      color: var(--accent-gold);
+      text-shadow: 1px 1px 0 #000;
+      letter-spacing: 0.5px;
+    }
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    button.btn {
+      background: #142850;
+      color: #fff;
+      border: 1px solid #3c6fc;
+      border-color: #486cfc;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    button.btn:hover {
+      background: #244890;
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    button.btn-gold {
+      background: #6c0000;
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    .stage-wrap {
+      position: relative;
+      margin-top: 12px;
+      border: 4px solid #264885;
+      border-radius: 8px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85);
+      background: #000;
+      overflow: hidden;
+    }
+    #gameCanvas {
+      display: block;
+      width: 960px;
+      height: 540px;
+      image-rendering: pixelated;
+    }
+    /* Filtro CRT Scanlines estilo TV Tubo anos 90 */
+    .crt-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.28) 50%
+      );
+      background-size: 100% 4px;
+      opacity: 0.85;
+    }
+    .crt-overlay.hidden {
+      display: none;
+    }
+    .controls-bar {
+      width: 100%;
+      max-width: 968px;
+      margin: 12px 0 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .card {
+      background: rgba(13, 24, 46, 0.9);
+      border: 1px solid #264885;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .card h3 {
+      color: var(--accent-cyan);
+      font-size: 13px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid rgba(72, 108, 252, 0.3);
+      padding-bottom: 3px;
+    }
+    kbd {
+      background: #1d3158;
+      border: 1px solid #486cfc;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-family: monospace;
+      color: var(--accent-gold);
+      font-size: 11px;
+    }
+
+    /* Modal REA Reverse Engineering Inspector */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 5, 15, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-backdrop.open {
+      display: flex;
+    }
+    .modal-content {
+      background: #0a1428;
+      border: 2px solid var(--accent-gold);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 1020px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .modal-header {
+      padding: 12px 18px;
+      background: #14264c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #305296;
+    }
+    .modal-header h2 {
+      font-size: 16px;
+      color: var(--accent-gold);
+    }
+    .modal-body {
+      padding: 16px;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.55;
+      user-select: text;
+    }
+    .rea-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .rea-box {
+      background: #060d1a;
+      border: 1px solid #264885;
+      border-radius: 6px;
+      padding: 12px;
+    }
+    .rea-box h4 {
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+    }
+    .pal-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .pal-swatch {
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .tiles-preview {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .tiles-preview img {
+      border: 2px solid #486cfc;
+      background: #000;
+      max-height: 320px;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="badge-md">MEGA DRIVE • GM T-30016-00</span>
+      <h1>SUPER VOLLEY BALL — PC WINDOWS EDITION</h1>
+    </div>
+    <div class="toolbar">
+      <button class="btn" onclick="window.svbControls.resetToTitle()">Início / Menu</button>
+      <button class="btn" onclick="window.svbControls.openTeamEdit()">Team Edit (0x12F8A)</button>
+      <button class="btn" onclick="toggleCRT()">CRT Scanlines</button>
+      <button class="btn" id="btnMute" onclick="toggleAudio()">Som FM: ON</button>
+      <button class="btn" onclick="toggleFullscreen()">Tela Cheia (F11)</button>
+      <button class="btn btn-gold" onclick="openReaModal()">REA ROM Inspector</button>
+    </div>
+  </header>
+
+  <div class="stage-wrap" id="stageWrap">
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+    <div class="crt-overlay" id="crtOverlay"></div>
+  </div>
+
+  <div class="controls-bar">
+    <div class="card">
+      <h3>Controles 1P (Teclado / Gamepad)</h3>
+      <div><kbd>Setas</kbd> ou <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> : Mover / Direcionar</div>
+      <div><kbd>Z</kbd> / <kbd>J</kbd> / <kbd>Espaço</kbd> (Botão <b>A</b>) : Manchete / Levantar / Sacar</div>
+      <div><kbd>X</kbd> / <kbd>K</kbd> (Botão <b>B</b>) : Pular / Cortar / Bloquear / Saque Viagem</div>
+      <div><kbd>C</kbd> / <kbd>L</kbd> (Botão <b>C</b>) : Super Saque &amp; Super Cortada (1x por Set)</div>
+    </div>
+    <div class="card">
+      <h3>Táticas Avançadas do Mega Drive</h3>
+      <div>• <b>Bola de Tempo (Quick Set)</b>: Segure <kbd>Baixo</kbd> no 2º toque</div>
+      <div>• <b>Ataque de Fundo (Back Row)</b>: Segure <kbd>Trás</kbd> no 2º toque</div>
+      <div>• <b>Largadinha (Dink Shot)</b>: Segure <kbd>Cima</kbd> + <kbd>Z</kbd> no ar</div>
+      <div>• <b>Jornada nas Estrelas (Makyuu3)</b>: Aperte <kbd>C</kbd> no saque!</div>
+    </div>
+    <div class="card">
+      <h3>Modo 2 Jogadores &amp; Substituição</h3>
+      <div>• <b>Substituição em Quadra</b>: Pressione <kbd>Tab</kbd> ou <kbd>T</kbd> antes do saque</div>
+      <div>• <b>2P Mover</b>: <kbd>Setas</kbd> ou <kbd>Numpad 8/4/5/6</kbd></div>
+      <div>• <b>2P Botões A / B / C</b>: <kbd>Numpad 1 / 2 / 3</kbd> (ou <kbd>,</kbd> <kbd>.</kbd> <kbd>/</kbd>)</div>
+      <div>• <b>Passwords Secretos ROM</b>: <kbd>STAFF</kbd> e <kbd>URAWAZA</kbd></div>
+    </div>
+  </div>
+
+  <!-- Modal REA ROM Inspector -->
+  <div class="modal-backdrop" id="reaModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>REA (Reverse Engineer Anything) — Dados Extraídos da ROM "Super Volley Ball (USA).md"</h2>
+        <button class="btn" onclick="closeReaModal()">Fechar [ESC]</button>
+      </div>
+      <div class="modal-body" id="reaModalBody"></div>
+    </div>
+  </div>
+
+  <script src="rom_data.js"></script>
+  <script src="audio_ym2612.js"></script>
+  <script src="game.js"></script>
+  <script>
+    function toggleCRT() {
+      document.getElementById("crtOverlay").classList.toggle("hidden");
+    }
+    function toggleAudio() {
+      const muted = window.ymSynth.toggleMute();
+      document.getElementById("btnMute").textContent = muted ? "Som FM: OFF" : "Som FM: ON";
+    }
+    function toggleFullscreen() {
+      const el = document.getElementById("stageWrap");
+      if (!document.fullscreenElement) {
+        el.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+    function openReaModal() {
+      const m = document.getElementById("reaModal");
+      const body = document.getElementById("reaModalBody");
+      const d = window.SUPER_VOLLEY_ROM_DATA;
+      if (d) {
+        let palHtml = "";
+        d.palettes.slice(0, 16).forEach((p) => {
+          const swatches = p.colors.map((c) => `<span class="pal-swatch" style="background:${c}" title="${c}"></span>`).join("");
+          palHtml += `<div class="pal-row"><span>#${String(p.index).padStart(2, "0")} (${p.rom_offset}):</span>${swatches}</div>`;
+        });
+
+        let teamsHtml = d.teams.map((t) => {
+          const pList = t.roster.map((p) => `#${p.number} <b>${p.name}</b> (SP:${p.sp} RE:${p.re} SV:${p.sv} BL:${p.bl})`).join(", ");
+          return `<div style="margin-bottom:8px;"><b>${t.code} - ${t.name}</b> <span style="color:#4890fc">[ROM ${t.rom_offset} | Paleta #${t.palette_primary_id}]</span><br/><span style="font-size:12px;color:#ccc;">${pList}</span></div>`;
+        }).join("");
+
+        body.innerHTML = `
+          <div class="rea-grid">
+            <div class="rea-box">
+              <h4>Cabeçalho SEGA Mega Drive &amp; Vetores M68000</h4>
+              <div><b>Console:</b> ${d.rom_info.console} (${d.rom_info.copyright})</div>
+              <div><b>Título Nacional (Shift-JIS):</b> ${d.rom_info.domestic_title}</div>
+              <div><b>Título Internacional:</b> ${d.rom_info.overseas_title}</div>
+              <div><b>Serial / Checksum:</b> ${d.rom_info.serial} / ${d.rom_info.checksum}</div>
+              <div><b>ROM / RAM Range:</b> ${d.rom_info.rom_range} / ${d.rom_info.ram_range}</div>
+              <div><b>M68000 Entry PC:</b> ${d.rom_info.vectors.entry_pc} | <b>SSP:</b> ${d.rom_info.vectors.initial_ssp}</div>
+              <div><b>HBlank (IRQ4):</b> ${d.rom_info.vectors.hblank_irq4} | <b>VBlank (IRQ6):</b> ${d.rom_info.vectors.vblank_irq6}</div>
+              <div style="margin-top:8px;"><b>Instrumentos FM YM2612 (0x1CF17):</b> ${d.fm_instruments.map(f => f.name).join(", ")}</div>
+            </div>
+            <div class="rea-box">
+              <h4>16 Paletas CRAM 9-bit Extraídas (0x142A0 - 0x1449F)</h4>
+              ${palHtml}
+            </div>
+          </div>
+          <div class="rea-box" style="margin-bottom:14px;">
+            <h4>9 Seleções &amp; Jogadores Decodificados da VDP Nametable (0x14F3A - 0x15399)</h4>
+            ${teamsHtml}
+          </div>
+          <div class="rea-box">
+            <h4>Bancos de Tiles VDP 4bpp Extraídos Diretamente da ROM (0x20000 - 0x3FFFF)</h4>
+            <div class="tiles-preview">
+              <div>
+                <div style="font-size:11px;margin-bottom:4px;color:#fcfc00;">Banco 0x20000–0x2FFFF (Fontes, Placar, Torcida, Troféu)</div>
+                <img src="assets/vdp_bank_ui_crowd_20000.png" alt="VDP Bank 20000" />
+              </div>
+              <div>
+                <div style="font-size:11px;margin-bottom:4px;color:#fcfc00;">Banco 0x30000–0x3FFFF (Sprites dos Jogadores, Juiz e Logo)</div>
+                <img src="assets/vdp_bank_sprites_logo_30000.png" alt="VDP Bank 30000" />
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      m.classList.add("open");
+    }
+    function closeReaModal() {
+      document.getElementById("reaModal").classList.remove("open");
+    }
+  </script>
+</body>
+</html>

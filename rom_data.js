@@ -1,0 +1,2753 @@
+window.SUPER_VOLLEY_ROM_DATA = {
+  "generator": "REA (Reverse Engineer Anything - morluto/rea methodology)",
+  "rom_info": {
+    "file_name": "Super Volley Ball (USA).md",
+    "file_size_bytes": 262144,
+    "console": "SEGA GENESIS",
+    "copyright": "(C)T-30 1990.AUG",
+    "domestic_title": "ＳＵＰＥＲ　Ｖｏｌｌｅｙ　ｂａｌｌ",
+    "overseas_title": "SUPER Volley ball",
+    "serial": "GM T-30016 -00",
+    "checksum": "0x62E0",
+    "rom_range": "0x00000000-0x0003FFFF",
+    "ram_range": "0x00FF0000-0x00FFFFFF",
+    "region": "U",
+    "vectors": {
+      "initial_ssp": "0x00FF8000",
+      "entry_pc": "0x00000206",
+      "hblank_irq4": "0x0000039E",
+      "vblank_irq6": "0x00000694"
+    }
+  },
+  "palettes": [
+    {
+      "index": 0,
+      "rom_offset": "0x142A0",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#000000",
+        "#242424",
+        "#484848",
+        "#004800",
+        "#009000",
+        "#00FC00",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 1,
+      "rom_offset": "0x142C0",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#900000",
+        "#D80000",
+        "#FC0000",
+        "#000048",
+        "#0000B4",
+        "#0000FC",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 2,
+      "rom_offset": "0x142E0",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#000000",
+        "#242424",
+        "#484848",
+        "#6C4800",
+        "#B49000",
+        "#FCFC00",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 3,
+      "rom_offset": "0x14300",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#900000",
+        "#D80000",
+        "#FC0000",
+        "#B49090",
+        "#FCB4B4",
+        "#FCD8D8",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 4,
+      "rom_offset": "0x14320",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#000000",
+        "#242424",
+        "#484848",
+        "#6C006C",
+        "#B400B4",
+        "#FC00FC",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 5,
+      "rom_offset": "0x14340",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#000090",
+        "#486CFC",
+        "#4890FC",
+        "#B4B400",
+        "#B4B400",
+        "#FCFC00",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 6,
+      "rom_offset": "0x14360",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#000090",
+        "#486CFC",
+        "#4890FC",
+        "#0000B4",
+        "#0000FC",
+        "#6C6CFC",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 7,
+      "rom_offset": "0x14380",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#900090",
+        "#D800D8",
+        "#FC6CFC",
+        "#B40000",
+        "#B40000",
+        "#FC0000",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 8,
+      "rom_offset": "0x143A0",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#909090",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#6C0000",
+        "#B40000",
+        "#FC0000",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 9,
+      "rom_offset": "0x143C0",
+      "colors": [
+        "#6C4824",
+        "#484848",
+        "#00006C",
+        "#0000B4",
+        "#0000FC",
+        "#6C0000",
+        "#900000",
+        "#FC0000",
+        "#904824",
+        "#D89090",
+        "#FCD8B4",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#482424",
+        "#002448"
+      ]
+    },
+    {
+      "index": 10,
+      "rom_offset": "0x143E0",
+      "colors": [
+        "#6C2400",
+        "#484848",
+        "#900000",
+        "#D80000",
+        "#FC0000",
+        "#FC0000",
+        "#FC2424",
+        "#FC6C6C",
+        "#904824",
+        "#FC906C",
+        "#FCB4B4",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#480000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 11,
+      "rom_offset": "0x14400",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#900000",
+        "#D80000",
+        "#FC0000",
+        "#B46C00",
+        "#FCB400",
+        "#FCD800",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 12,
+      "rom_offset": "0x14420",
+      "colors": [
+        "#906C24",
+        "#484848",
+        "#000090",
+        "#486CFC",
+        "#4890FC",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#904824",
+        "#D8906C",
+        "#FCD8B4",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#482400",
+        "#002448"
+      ]
+    },
+    {
+      "index": 13,
+      "rom_offset": "0x14440",
+      "colors": [
+        "#6C4800",
+        "#484848",
+        "#909090",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#906C00",
+        "#D8B400",
+        "#FCFC00",
+        "#904824",
+        "#D8906C",
+        "#FCD8B4",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#482400",
+        "#002448"
+      ]
+    },
+    {
+      "index": 14,
+      "rom_offset": "0x14460",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#909090",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#0000D8",
+        "#006CFC",
+        "#00B4FC",
+        "#6C2400",
+        "#B44824",
+        "#D8906C",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#002448"
+      ]
+    },
+    {
+      "index": 15,
+      "rom_offset": "0x14480",
+      "colors": [
+        "#906C24",
+        "#484848",
+        "#909000",
+        "#D8D800",
+        "#FCFC00",
+        "#484848",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#904824",
+        "#D8906C",
+        "#FCD8B4",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#6C4800",
+        "#900090"
+      ]
+    },
+    {
+      "index": 16,
+      "rom_offset": "0x144A0",
+      "colors": [
+        "#480000",
+        "#900000",
+        "#D80000",
+        "#FC2400",
+        "#FC6C00",
+        "#FCB400",
+        "#00B448",
+        "#486CFC",
+        "#484848",
+        "#6C6C6C",
+        "#909090",
+        "#B4B4B4",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#000000",
+        "#000000"
+      ]
+    },
+    {
+      "index": 17,
+      "rom_offset": "0x144C0",
+      "colors": [
+        "#244848",
+        "#48486C",
+        "#484848",
+        "#909090",
+        "#904848",
+        "#6C4848",
+        "#906C48",
+        "#906C6C",
+        "#6C6CB4",
+        "#244824",
+        "#486C48",
+        "#FC6C6C",
+        "#FC9090",
+        "#FCFCFC",
+        "#FCD8D8",
+        "#000000"
+      ]
+    },
+    {
+      "index": 18,
+      "rom_offset": "0x144E0",
+      "colors": [
+        "#486C6C",
+        "#6C6C90",
+        "#909090",
+        "#B4B4B4",
+        "#B46C6C",
+        "#906C6C",
+        "#B4906C",
+        "#B49090",
+        "#9090D8",
+        "#486C48",
+        "#6C906C",
+        "#FC6C6C",
+        "#FC9090",
+        "#FCFCFC",
+        "#FCD8D8",
+        "#002448"
+      ]
+    },
+    {
+      "index": 19,
+      "rom_offset": "0x14500",
+      "colors": [
+        "#FC6C6C",
+        "#FC9090",
+        "#FCB4B4",
+        "#90FC90",
+        "#FCFC00",
+        "#D8FCD8",
+        "#90FCFC",
+        "#006C00",
+        "#FCFCFC",
+        "#FCFCB4",
+        "#FC0000",
+        "#00D800",
+        "#00D8FC",
+        "#0000FC",
+        "#000000",
+        "#000000"
+      ]
+    },
+    {
+      "index": 20,
+      "rom_offset": "0x14520",
+      "colors": [
+        "#0000D8",
+        "#0000B4",
+        "#000090",
+        "#00006C",
+        "#000048",
+        "#000024",
+        "#FCFCFC",
+        "#9048FC",
+        "#B46CFC",
+        "#D890FC",
+        "#D8B4FC",
+        "#D8D8FC",
+        "#FCFCFC",
+        "#480024",
+        "#000000",
+        "#000000"
+      ]
+    },
+    {
+      "index": 21,
+      "rom_offset": "0x14540",
+      "colors": [
+        "#6C2424",
+        "#B44824",
+        "#D84824",
+        "#FC4824",
+        "#FC6C24",
+        "#FC9024",
+        "#FCB424",
+        "#FCD824",
+        "#FCFC48",
+        "#FCFC90",
+        "#FCFCD8",
+        "#FCFCFC",
+        "#0000FC",
+        "#00006C",
+        "#000000",
+        "#000000"
+      ]
+    },
+    {
+      "index": 22,
+      "rom_offset": "0x14560",
+      "colors": [
+        "#0000B4",
+        "#FC0000",
+        "#FCFCFC",
+        "#6C6C6C",
+        "#909090",
+        "#B4B4B4",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#FC00D8",
+        "#FC0090",
+        "#FC006C",
+        "#FC0048",
+        "#FC0000",
+        "#FC6C6C",
+        "#FC9090",
+        "#000000"
+      ]
+    },
+    {
+      "index": 23,
+      "rom_offset": "0x14580",
+      "colors": [
+        "#0000B4",
+        "#FC0000",
+        "#FCFCFC",
+        "#6C6C6C",
+        "#909090",
+        "#B4B4B4",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#FC00D8",
+        "#FC0090",
+        "#FC006C",
+        "#FC0048",
+        "#FC0000",
+        "#FC6C6C",
+        "#FC9090",
+        "#6C246C"
+      ]
+    },
+    {
+      "index": 24,
+      "rom_offset": "0x145A0",
+      "colors": [
+        "#D8D8D8",
+        "#0000D8",
+        "#242448",
+        "#D84800",
+        "#900000",
+        "#6C0000",
+        "#FCFCFC",
+        "#D8D8B4",
+        "#D8B490",
+        "#D86C48",
+        "#B44824",
+        "#B42400",
+        "#902400",
+        "#000000",
+        "#909090",
+        "#6C4890"
+      ]
+    },
+    {
+      "index": 25,
+      "rom_offset": "0x145C0",
+      "colors": [
+        "#000000",
+        "#484848",
+        "#909090",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#6C0000",
+        "#B40000",
+        "#FC0000",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#6C4890"
+      ]
+    },
+    {
+      "index": 26,
+      "rom_offset": "0x145E0",
+      "colors": [
+        "#FCFCFC",
+        "#484848",
+        "#909090",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#00006C",
+        "#0000FC",
+        "#240024",
+        "#904824",
+        "#D86C48",
+        "#FCB490",
+        "#6C6C6C",
+        "#B4B4B4",
+        "#FCFCFC",
+        "#000000",
+        "#000000"
+      ]
+    },
+    {
+      "index": 27,
+      "rom_offset": "0x14600",
+      "colors": [
+        "#000000",
+        "#900000",
+        "#000000",
+        "#000000",
+        "#FC6C00",
+        "#00FCFC",
+        "#0000FC",
+        "#FC0000",
+        "#00FC00",
+        "#6C6C6C",
+        "#909090",
+        "#B4B4B4",
+        "#D8D8D8",
+        "#FCFCFC",
+        "#000000",
+        "#000000"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": 0,
+      "code": "USA",
+      "name": "Estados Unidos (USA)",
+      "rom_offset": "0x14FBA",
+      "palette_primary_id": 9,
+      "palette_alt_id": 14,
+      "jersey_primary": "#0000FC",
+      "jersey_secondary": "#FC0000",
+      "jersey_shadow": "#00006C",
+      "skin_color": "#FCD8B4",
+      "alt_jersey_primary": "#FCFCFC",
+      "alt_jersey_secondary": "#00B4FC",
+      "stats_avg": {
+        "sp": 6.1,
+        "re": 6.8,
+        "sv": 5.0,
+        "bl": 6.2
+      },
+      "roster": [
+        {
+          "id": 0,
+          "rom_offset": "0x1503A",
+          "name": "PATON",
+          "number": 5,
+          "sp": 6,
+          "re": 6,
+          "sv": 4,
+          "bl": 6,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 1,
+          "rom_offset": "0x1504A",
+          "name": "SABLE",
+          "number": 4,
+          "sp": 6,
+          "re": 8,
+          "sv": 5,
+          "bl": 8,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 2,
+          "rom_offset": "0x1505A",
+          "name": "TOMAS",
+          "number": 6,
+          "sp": 8,
+          "re": 7,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 3,
+          "rom_offset": "0x1506A",
+          "name": "BOCK",
+          "number": 7,
+          "sp": 6,
+          "re": 7,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 4,
+          "rom_offset": "0x1507A",
+          "name": "KELLY",
+          "number": 15,
+          "sp": 8,
+          "re": 8,
+          "sv": 6,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 5,
+          "rom_offset": "0x1508A",
+          "name": "STACK",
+          "number": 10,
+          "sp": 6,
+          "re": 6,
+          "sv": 4,
+          "bl": 6,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        },
+        {
+          "id": 6,
+          "rom_offset": "0x1509A",
+          "name": "TOWER",
+          "number": 1,
+          "sp": 4,
+          "re": 4,
+          "sv": 3,
+          "bl": 4,
+          "role_id": 3,
+          "role_name": "Setter (Levantador)"
+        },
+        {
+          "id": 7,
+          "rom_offset": "0x150AA",
+          "name": "SUGAR",
+          "number": 11,
+          "sp": 5,
+          "re": 8,
+          "sv": 8,
+          "bl": 5,
+          "role_id": 3,
+          "role_name": "Setter (Levantador)"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "code": "URS",
+      "name": "União Soviética (URS)",
+      "rom_offset": "0x14FCA",
+      "palette_primary_id": 10,
+      "palette_alt_id": 15,
+      "jersey_primary": "#FC0000",
+      "jersey_secondary": "#FC6C6C",
+      "jersey_shadow": "#900000",
+      "skin_color": "#FCB4B4",
+      "alt_jersey_primary": "#FCFC00",
+      "alt_jersey_secondary": "#FCFCFC",
+      "stats_avg": {
+        "sp": 7.0,
+        "re": 5.9,
+        "sv": 5.9,
+        "bl": 6.6
+      },
+      "roster": [
+        {
+          "id": 8,
+          "rom_offset": "0x150BA",
+          "name": "ZADIG",
+          "number": 9,
+          "sp": 7,
+          "re": 6,
+          "sv": 6,
+          "bl": 7,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 9,
+          "rom_offset": "0x150CA",
+          "name": "SOROC",
+          "number": 10,
+          "sp": 8,
+          "re": 6,
+          "sv": 7,
+          "bl": 6,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 10,
+          "rom_offset": "0x150DA",
+          "name": "ANTOV",
+          "number": 11,
+          "sp": 8,
+          "re": 7,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 11,
+          "rom_offset": "0x150EA",
+          "name": "ITZAK",
+          "number": 1,
+          "sp": 8,
+          "re": 7,
+          "sv": 6,
+          "bl": 6,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 12,
+          "rom_offset": "0x150FA",
+          "name": "KANOV",
+          "number": 2,
+          "sp": 7,
+          "re": 6,
+          "sv": 7,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 13,
+          "rom_offset": "0x1510A",
+          "name": "ROSEV",
+          "number": 8,
+          "sp": 6,
+          "re": 5,
+          "sv": 5,
+          "bl": 5,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        },
+        {
+          "id": 14,
+          "rom_offset": "0x1511A",
+          "name": "VILDY",
+          "number": 7,
+          "sp": 7,
+          "re": 5,
+          "sv": 6,
+          "bl": 8,
+          "role_id": 3,
+          "role_name": "Setter (Levantador)"
+        },
+        {
+          "id": 15,
+          "rom_offset": "0x1512A",
+          "name": "UVICH",
+          "number": 3,
+          "sp": 5,
+          "re": 5,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "BRA",
+      "name": "Brasil (BRA)",
+      "rom_offset": "0x14FDA",
+      "palette_primary_id": 14,
+      "palette_alt_id": 11,
+      "jersey_primary": "#FCFCFC",
+      "jersey_secondary": "#00B4FC",
+      "jersey_shadow": "#909090",
+      "skin_color": "#D8906C",
+      "alt_jersey_primary": "#FC0000",
+      "alt_jersey_secondary": "#FCD800",
+      "stats_avg": {
+        "sp": 6.2,
+        "re": 4.8,
+        "sv": 5.5,
+        "bl": 6.3
+      },
+      "roster": [
+        {
+          "id": 16,
+          "rom_offset": "0x1513A",
+          "name": "MONTE",
+          "number": 4,
+          "sp": 6,
+          "re": 5,
+          "sv": 6,
+          "bl": 6,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 17,
+          "rom_offset": "0x1514A",
+          "name": "DALMO",
+          "number": 6,
+          "sp": 6,
+          "re": 4,
+          "sv": 5,
+          "bl": 6,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 18,
+          "rom_offset": "0x1515A",
+          "name": "SAMBA",
+          "number": 8,
+          "sp": 6,
+          "re": 7,
+          "sv": 6,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 19,
+          "rom_offset": "0x1516A",
+          "name": "DALIA",
+          "number": 11,
+          "sp": 7,
+          "re": 5,
+          "sv": 6,
+          "bl": 7,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 20,
+          "rom_offset": "0x1517A",
+          "name": "BUERO",
+          "number": 12,
+          "sp": 7,
+          "re": 3,
+          "sv": 4,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 21,
+          "rom_offset": "0x1518A",
+          "name": "DESIO",
+          "number": 7,
+          "sp": 5,
+          "re": 5,
+          "sv": 6,
+          "bl": 5,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": "HOL",
+      "name": "Holanda (HOL)",
+      "rom_offset": "0x14FEA",
+      "palette_primary_id": 15,
+      "palette_alt_id": 8,
+      "jersey_primary": "#FCFC00",
+      "jersey_secondary": "#FCFCFC",
+      "jersey_shadow": "#909000",
+      "skin_color": "#FCD8B4",
+      "alt_jersey_primary": "#FCFCFC",
+      "alt_jersey_secondary": "#FC0000",
+      "stats_avg": {
+        "sp": 4.8,
+        "re": 5.3,
+        "sv": 4.0,
+        "bl": 7.0
+      },
+      "roster": [
+        {
+          "id": 22,
+          "rom_offset": "0x1519A",
+          "name": "OLFER",
+          "number": 6,
+          "sp": 6,
+          "re": 5,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 23,
+          "rom_offset": "0x151AA",
+          "name": "BEUZE",
+          "number": 10,
+          "sp": 4,
+          "re": 5,
+          "sv": 3,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 24,
+          "rom_offset": "0x151BA",
+          "name": "VANDE",
+          "number": 15,
+          "sp": 6,
+          "re": 6,
+          "sv": 4,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 25,
+          "rom_offset": "0x151CA",
+          "name": "AREND",
+          "number": 7,
+          "sp": 4,
+          "re": 5,
+          "sv": 4,
+          "bl": 7,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 26,
+          "rom_offset": "0x151DA",
+          "name": "BLANK",
+          "number": 8,
+          "sp": 5,
+          "re": 6,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 27,
+          "rom_offset": "0x151EA",
+          "name": "BOSCH",
+          "number": 12,
+          "sp": 4,
+          "re": 5,
+          "sv": 3,
+          "bl": 7,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "FRA",
+      "name": "França (FRA)",
+      "rom_offset": "0x14FFA",
+      "palette_primary_id": 12,
+      "palette_alt_id": 4,
+      "jersey_primary": "#4890FC",
+      "jersey_secondary": "#FCFCFC",
+      "jersey_shadow": "#000090",
+      "skin_color": "#FCD8B4",
+      "alt_jersey_primary": "#484848",
+      "alt_jersey_secondary": "#FC00FC",
+      "stats_avg": {
+        "sp": 5.5,
+        "re": 4.5,
+        "sv": 4.0,
+        "bl": 5.0
+      },
+      "roster": [
+        {
+          "id": 28,
+          "rom_offset": "0x151FA",
+          "name": "BUPIN",
+          "number": 5,
+          "sp": 8,
+          "re": 4,
+          "sv": 3,
+          "bl": 6,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 29,
+          "rom_offset": "0x1520A",
+          "name": "DEKAR",
+          "number": 1,
+          "sp": 6,
+          "re": 7,
+          "sv": 4,
+          "bl": 6,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 30,
+          "rom_offset": "0x1521A",
+          "name": "JUNOT",
+          "number": 7,
+          "sp": 5,
+          "re": 4,
+          "sv": 5,
+          "bl": 5,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 31,
+          "rom_offset": "0x1522A",
+          "name": "MASON",
+          "number": 3,
+          "sp": 4,
+          "re": 4,
+          "sv": 4,
+          "bl": 5,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 32,
+          "rom_offset": "0x1523A",
+          "name": "TULUS",
+          "number": 9,
+          "sp": 6,
+          "re": 3,
+          "sv": 3,
+          "bl": 4,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 33,
+          "rom_offset": "0x1524A",
+          "name": "FABOR",
+          "number": 12,
+          "sp": 4,
+          "re": 5,
+          "sv": 5,
+          "bl": 4,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "code": "ITA",
+      "name": "Itália (ITA)",
+      "rom_offset": "0x1500A",
+      "palette_primary_id": 13,
+      "palette_alt_id": 2,
+      "jersey_primary": "#FCFCFC",
+      "jersey_secondary": "#FCFC00",
+      "jersey_shadow": "#909090",
+      "skin_color": "#FCD8B4",
+      "alt_jersey_primary": "#484848",
+      "alt_jersey_secondary": "#FCFC00",
+      "stats_avg": {
+        "sp": 4.8,
+        "re": 3.3,
+        "sv": 4.0,
+        "bl": 4.3
+      },
+      "roster": [
+        {
+          "id": 34,
+          "rom_offset": "0x1525A",
+          "name": "FALCO",
+          "number": 1,
+          "sp": 6,
+          "re": 3,
+          "sv": 3,
+          "bl": 6,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 35,
+          "rom_offset": "0x1526A",
+          "name": "COSTA",
+          "number": 10,
+          "sp": 7,
+          "re": 2,
+          "sv": 3,
+          "bl": 6,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 36,
+          "rom_offset": "0x1527A",
+          "name": "BURDI",
+          "number": 9,
+          "sp": 5,
+          "re": 3,
+          "sv": 5,
+          "bl": 4,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 37,
+          "rom_offset": "0x1528A",
+          "name": "RICCI",
+          "number": 6,
+          "sp": 4,
+          "re": 4,
+          "sv": 4,
+          "bl": 4,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 38,
+          "rom_offset": "0x1529A",
+          "name": "SCALA",
+          "number": 11,
+          "sp": 4,
+          "re": 3,
+          "sv": 4,
+          "bl": 4,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 39,
+          "rom_offset": "0x152AA",
+          "name": "ZUCCO",
+          "number": 4,
+          "sp": 3,
+          "re": 5,
+          "sv": 5,
+          "bl": 2,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "code": "JPN",
+      "name": "Japão (JPN)",
+      "rom_offset": "0x1501A",
+      "palette_primary_id": 8,
+      "palette_alt_id": 0,
+      "jersey_primary": "#FCFCFC",
+      "jersey_secondary": "#FC0000",
+      "jersey_shadow": "#909090",
+      "skin_color": "#FCB490",
+      "alt_jersey_primary": "#484848",
+      "alt_jersey_secondary": "#00FC00",
+      "stats_avg": {
+        "sp": 6.2,
+        "re": 5.2,
+        "sv": 4.4,
+        "bl": 5.4
+      },
+      "roster": [
+        {
+          "id": 40,
+          "rom_offset": "0x152BA",
+          "name": "SUZKI",
+          "number": 4,
+          "sp": 8,
+          "re": 8,
+          "sv": 2,
+          "bl": 7,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 41,
+          "rom_offset": "0x152CA",
+          "name": "YAMHA",
+          "number": 2,
+          "sp": 6,
+          "re": 7,
+          "sv": 3,
+          "bl": 4,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 42,
+          "rom_offset": "0x152DA",
+          "name": "MAZDA",
+          "number": 3,
+          "sp": 6,
+          "re": 6,
+          "sv": 5,
+          "bl": 5,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 43,
+          "rom_offset": "0x152EA",
+          "name": "HONDA",
+          "number": 12,
+          "sp": 7,
+          "re": 4,
+          "sv": 6,
+          "bl": 8,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 44,
+          "rom_offset": "0x152FA",
+          "name": "TOYOT",
+          "number": 10,
+          "sp": 7,
+          "re": 5,
+          "sv": 6,
+          "bl": 6,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 45,
+          "rom_offset": "0x1530A",
+          "name": "NISAN",
+          "number": 5,
+          "sp": 2,
+          "re": 5,
+          "sv": 4,
+          "bl": 2,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        },
+        {
+          "id": 46,
+          "rom_offset": "0x1531A",
+          "name": "MIFNE",
+          "number": 8,
+          "sp": 7,
+          "re": 5,
+          "sv": 4,
+          "bl": 4,
+          "role_id": 3,
+          "role_name": "Setter (Levantador)"
+        },
+        {
+          "id": 47,
+          "rom_offset": "0x1532A",
+          "name": "NINJA",
+          "number": 7,
+          "sp": 7,
+          "re": 2,
+          "sv": 5,
+          "bl": 7,
+          "role_id": 3,
+          "role_name": "Setter (Levantador)"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "code": "CHN",
+      "name": "China (CHN)",
+      "rom_offset": "0x1502A",
+      "palette_primary_id": 11,
+      "palette_alt_id": 0,
+      "jersey_primary": "#FC0000",
+      "jersey_secondary": "#FCD800",
+      "jersey_shadow": "#900000",
+      "skin_color": "#FCB490",
+      "alt_jersey_primary": "#484848",
+      "alt_jersey_secondary": "#00FC00",
+      "stats_avg": {
+        "sp": 3.5,
+        "re": 2.8,
+        "sv": 2.8,
+        "bl": 3.8
+      },
+      "roster": [
+        {
+          "id": 48,
+          "rom_offset": "0x1533A",
+          "name": "RIE",
+          "number": 1,
+          "sp": 5,
+          "re": 3,
+          "sv": 2,
+          "bl": 4,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 49,
+          "rom_offset": "0x1534A",
+          "name": "CHAN",
+          "number": 2,
+          "sp": 4,
+          "re": 2,
+          "sv": 3,
+          "bl": 3,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 50,
+          "rom_offset": "0x1535A",
+          "name": "CUEN",
+          "number": 3,
+          "sp": 3,
+          "re": 2,
+          "sv": 3,
+          "bl": 5,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 51,
+          "rom_offset": "0x1536A",
+          "name": "GO",
+          "number": 4,
+          "sp": 3,
+          "re": 3,
+          "sv": 4,
+          "bl": 4,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 52,
+          "rom_offset": "0x1537A",
+          "name": "FEN",
+          "number": 5,
+          "sp": 4,
+          "re": 4,
+          "sv": 2,
+          "bl": 4,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 53,
+          "rom_offset": "0x1538A",
+          "name": "RAO",
+          "number": 6,
+          "sp": 2,
+          "re": 3,
+          "sv": 3,
+          "bl": 3,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "code": "???",
+      "name": "Seleção Secreta ??? (URAWAZA)",
+      "rom_offset": "0x14F3A",
+      "palette_primary_id": 4,
+      "palette_alt_id": 7,
+      "jersey_primary": "#FC00FC",
+      "jersey_secondary": "#FCFCFC",
+      "jersey_shadow": "#6C006C",
+      "skin_color": "#FCB490",
+      "alt_jersey_primary": "#FC6CFC",
+      "alt_jersey_secondary": "#FC0000",
+      "stats_avg": {
+        "sp": 8.0,
+        "re": 7.5,
+        "sv": 8.0,
+        "bl": 8.0
+      },
+      "secret": true,
+      "roster": [
+        {
+          "id": 54,
+          "rom_offset": "0x1539A",
+          "name": "TSUKA",
+          "number": 2,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 55,
+          "rom_offset": "0x153AA",
+          "name": "NAKAM",
+          "number": 1,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 56,
+          "rom_offset": "0x153BA",
+          "name": "ISHIM",
+          "number": 3,
+          "sp": 8,
+          "re": 8,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 57,
+          "rom_offset": "0x153CA",
+          "name": "OKUDA",
+          "number": 6,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 2,
+          "role_name": "Middle Blocker (Central / Bloqueador)"
+        },
+        {
+          "id": 58,
+          "rom_offset": "0x153DA",
+          "name": "ITAMU",
+          "number": 5,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 1,
+          "role_name": "Ace Spiker (Cortador Principal)"
+        },
+        {
+          "id": 59,
+          "rom_offset": "0x153EA",
+          "name": "VSYS",
+          "number": 7,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        },
+        {
+          "id": 60,
+          "rom_offset": "0x153FA",
+          "name": "SEGA",
+          "number": 10,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 3,
+          "role_name": "Setter (Levantador)"
+        },
+        {
+          "id": 61,
+          "rom_offset": "0x1540A",
+          "name": "MEGA",
+          "number": 4,
+          "sp": 8,
+          "re": 7,
+          "sv": 8,
+          "bl": 8,
+          "role_id": 4,
+          "role_name": "All-Rounder (Ponteiro / Defensor)"
+        }
+      ]
+    }
+  ],
+  "coach_quotes": {
+    "champion": "HEY! GREAT JOB. WE'RE THE CHAMPS.",
+    "win_1": "LET'S GO FOR THE GOLD.",
+    "win_2": "WE CAN DO IT. LET'S GO!",
+    "lose_1": "OH-NO! LET'S TRY AGAIN.",
+    "lose_2": "OH-MAN! WE'LL TRY HARDER.",
+    "lose_3": "LET'S GIVE IT THE BEST NEXT TIME.",
+    "lose_4": "WE NEED TEAMWORK!",
+    "lose_5": "SORRY-COACH. WE'LL TRY HARDER."
+  },
+  "hidden_passwords": {
+    "STAFF": "Exibe os créditos secretos da equipe original da Video System / Micronics (Tsukada, Nakamura, Ishimoto, Okuda, Itamura)",
+    "URAWAZA": "Desbloqueia a seleção secreta '???' com atributos máximos no World League e Normal Game"
+  },
+  "sfx_catalog": [
+    {
+      "rom_offset": "0x18000",
+      "name": "FuePeeK  U",
+      "params": [
+        111,
+        33,
+        31,
+        3,
+        192,
+        8,
+        15,
+        21,
+        31,
+        3,
+        192,
+        8,
+        60,
+        0,
+        24,
+        18
+      ]
+    },
+    {
+      "rom_offset": "0x18040",
+      "name": "FuePeeK  C",
+      "params": [
+        111,
+        33,
+        31,
+        3,
+        192,
+        8,
+        15,
+        21,
+        31,
+        3,
+        192,
+        8,
+        60,
+        0,
+        24,
+        18
+      ]
+    },
+    {
+      "rom_offset": "0x18080",
+      "name": "FuePeeK  B",
+      "params": [
+        111,
+        33,
+        31,
+        3,
+        192,
+        8,
+        15,
+        21,
+        31,
+        3,
+        192,
+        8,
+        60,
+        0,
+        24,
+        18
+      ]
+    },
+    {
+      "rom_offset": "0x180C0",
+      "name": "FuePeeK  U",
+      "params": [
+        111,
+        33,
+        31,
+        3,
+        192,
+        8,
+        15,
+        21,
+        31,
+        3,
+        192,
+        8,
+        60,
+        0,
+        24,
+        18
+      ]
+    },
+    {
+      "rom_offset": "0x18100",
+      "name": "Bon1a   KU",
+      "params": [
+        48,
+        21,
+        31,
+        31,
+        0,
+        1,
+        49,
+        49,
+        31,
+        31,
+        0,
+        1,
+        49,
+        36,
+        31,
+        24
+      ]
+    },
+    {
+      "rom_offset": "0x18140",
+      "name": "FootKiiK C",
+      "params": [
+        2,
+        7,
+        27,
+        22,
+        31,
+        235,
+        2,
+        2,
+        22,
+        21,
+        31,
+        235,
+        100,
+        30,
+        21,
+        25
+      ]
+    },
+    {
+      "rom_offset": "0x18180",
+      "name": "HanSya C3F",
+      "params": [
+        111,
+        4,
+        26,
+        31,
+        147,
+        243,
+        33,
+        17,
+        31,
+        30,
+        146,
+        2,
+        93,
+        13,
+        31,
+        20
+      ]
+    },
+    {
+      "rom_offset": "0x181C0",
+      "name": "MuchiHit",
+      "params": [
+        96,
+        7,
+        31,
+        31,
+        15,
+        19,
+        47,
+        7,
+        27,
+        23,
+        210,
+        98,
+        1,
+        16,
+        31,
+        24
+      ]
+    },
+    {
+      "rom_offset": "0x18200",
+      "name": "BD      F1",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        33,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18240",
+      "name": "BD      F2",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        33,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18280",
+      "name": "NibuiOto1",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x182C0",
+      "name": "NibuiOto2",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18300",
+      "name": "NibuiOto3",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18340",
+      "name": "NibuiOto4",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18380",
+      "name": "NibuiOto5",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x183C0",
+      "name": "NibuiOto6",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18400",
+      "name": "NibuiOto7",
+      "params": [
+        0,
+        13,
+        31,
+        16,
+        0,
+        241,
+        0,
+        0,
+        31,
+        22,
+        4,
+        99,
+        96,
+        38,
+        19,
+        11
+      ]
+    },
+    {
+      "rom_offset": "0x18440",
+      "name": "Credit1C4U",
+      "params": [
+        51,
+        15,
+        20,
+        131,
+        192,
+        31,
+        73,
+        15,
+        20,
+        131,
+        64,
+        31,
+        36,
+        0,
+        31,
+        15
+      ]
+    },
+    {
+      "rom_offset": "0x18480",
+      "name": "StormF3  C",
+      "params": [
+        1,
+        39,
+        18,
+        6,
+        1,
+        163,
+        3,
+        10,
+        20,
+        9,
+        196,
+        81,
+        0,
+        7,
+        20,
+        5
+      ]
+    },
+    {
+      "rom_offset": "0x184C0",
+      "name": "StormC3  C",
+      "params": [
+        1,
+        39,
+        18,
+        6,
+        1,
+        163,
+        3,
+        10,
+        20,
+        9,
+        196,
+        81,
+        0,
+        7,
+        20,
+        5
+      ]
+    },
+    {
+      "rom_offset": "0x18600",
+      "name": "CONTINUE 1",
+      "params": [
+        61,
+        39,
+        31,
+        27,
+        0,
+        245,
+        48,
+        41,
+        27,
+        18,
+        192,
+        248,
+        55,
+        32,
+        31,
+        13
+      ]
+    },
+    {
+      "rom_offset": "0x18640",
+      "name": "CONTINUE 2",
+      "params": [
+        61,
+        39,
+        19,
+        27,
+        0,
+        197,
+        48,
+        41,
+        27,
+        18,
+        192,
+        248,
+        55,
+        32,
+        31,
+        13
+      ]
+    },
+    {
+      "rom_offset": "0x18680",
+      "name": "CONTINUE 3",
+      "params": [
+        60,
+        15,
+        12,
+        31,
+        23,
+        15,
+        101,
+        17,
+        31,
+        31,
+        83,
+        40,
+        108,
+        38,
+        23,
+        22
+      ]
+    },
+    {
+      "rom_offset": "0x18780",
+      "name": "FM PULSE",
+      "params": [
+        49,
+        99,
+        31,
+        31,
+        0,
+        15,
+        50,
+        34,
+        31,
+        31,
+        0,
+        15,
+        49,
+        17,
+        31,
+        31
+      ]
+    },
+    {
+      "rom_offset": "0x187C0",
+      "name": "FM SQUARE",
+      "params": [
+        49,
+        99,
+        31,
+        31,
+        0,
+        15,
+        50,
+        32,
+        31,
+        31,
+        0,
+        15,
+        49,
+        99,
+        31,
+        31
+      ]
+    },
+    {
+      "rom_offset": "0x18800",
+      "name": "SpikeOku1U",
+      "params": [
+        60,
+        0,
+        31,
+        20,
+        23,
+        15,
+        108,
+        32,
+        14,
+        13,
+        82,
+        15,
+        108,
+        29,
+        26,
+        31
+      ]
+    },
+    {
+      "rom_offset": "0x18840",
+      "name": "SpikeOku2U",
+      "params": [
+        60,
+        0,
+        31,
+        20,
+        23,
+        15,
+        108,
+        32,
+        14,
+        13,
+        82,
+        15,
+        108,
+        29,
+        26,
+        31
+      ]
+    },
+    {
+      "rom_offset": "0x18880",
+      "name": "SpikeOku3U",
+      "params": [
+        60,
+        0,
+        31,
+        20,
+        23,
+        3,
+        108,
+        30,
+        11,
+        13,
+        82,
+        15,
+        108,
+        29,
+        26,
+        31
+      ]
+    },
+    {
+      "rom_offset": "0x188C0",
+      "name": "SpikeOK4 A",
+      "params": [
+        64,
+        0,
+        31,
+        29,
+        0,
+        17,
+        53,
+        255,
+        24,
+        27,
+        78,
+        68,
+        49,
+        27,
+        31,
+        22
+      ]
+    },
+    {
+      "rom_offset": "0x18900",
+      "name": "ServeNew1U",
+      "params": [
+        64,
+        15,
+        31,
+        29,
+        0,
+        17,
+        49,
+        37,
+        31,
+        31,
+        0,
+        4,
+        49,
+        27,
+        31,
+        22
+      ]
+    },
+    {
+      "rom_offset": "0x18940",
+      "name": "ServeOK 1U",
+      "params": [
+        48,
+        16,
+        31,
+        29,
+        13,
+        17,
+        49,
+        34,
+        23,
+        19,
+        31,
+        105,
+        49,
+        9,
+        31,
+        25
+      ]
+    },
+    {
+      "rom_offset": "0x18980",
+      "name": "ServeOK 2U",
+      "params": [
+        48,
+        7,
+        31,
+        29,
+        13,
+        17,
+        49,
+        26,
+        23,
+        19,
+        31,
+        105,
+        49,
+        2,
+        31,
+        25
+      ]
+    },
+    {
+      "rom_offset": "0x189C0",
+      "name": "ChiOK    U",
+      "params": [
+        4,
+        31,
+        31,
+        18,
+        159,
+        143,
+        50,
+        12,
+        14,
+        24,
+        0,
+        1,
+        58,
+        0,
+        31,
+        16
+      ]
+    },
+    {
+      "rom_offset": "0x18A00",
+      "name": "Toss1    U",
+      "params": [
+        60,
+        12,
+        13,
+        31,
+        31,
+        15,
+        111,
+        47,
+        13,
+        31,
+        218,
+        15,
+        108,
+        19,
+        23,
+        22
+      ]
+    },
+    {
+      "rom_offset": "0x18A40",
+      "name": "Toss2    K",
+      "params": [
+        60,
+        0,
+        12,
+        31,
+        23,
+        8,
+        111,
+        33,
+        12,
+        31,
+        218,
+        7,
+        108,
+        38,
+        23,
+        22
+      ]
+    },
+    {
+      "rom_offset": "0x18A80",
+      "name": "ReceivMisU",
+      "params": [
+        99,
+        24,
+        29,
+        14,
+        223,
+        143,
+        0,
+        0,
+        21,
+        14,
+        31,
+        31,
+        101,
+        0,
+        31,
+        15
+      ]
+    },
+    {
+      "rom_offset": "0x18AC0",
+      "name": "RecvMiss2U",
+      "params": [
+        99,
+        31,
+        29,
+        14,
+        192,
+        143,
+        0,
+        0,
+        21,
+        14,
+        11,
+        31,
+        101,
+        0,
+        31,
+        14
+      ]
+    },
+    {
+      "rom_offset": "0x18B00",
+      "name": "Tataku1  U",
+      "params": [
+        10,
+        22,
+        29,
+        19,
+        64,
+        245,
+        50,
+        11,
+        27,
+        16,
+        192,
+        246,
+        1,
+        0,
+        11,
+        27
+      ]
+    },
+    {
+      "rom_offset": "0x18B40",
+      "name": "FootKiiEDU",
+      "params": [
+        1,
+        7,
+        26,
+        20,
+        31,
+        233,
+        1,
+        2,
+        22,
+        20,
+        31,
+        233,
+        98,
+        6,
+        20,
+        24
+      ]
+    },
+    {
+      "rom_offset": "0x18B80",
+      "name": "Makyuu3  U",
+      "params": [
+        60,
+        0,
+        12,
+        31,
+        23,
+        15,
+        111,
+        17,
+        17,
+        14,
+        218,
+        31,
+        108,
+        38,
+        13,
+        22
+      ]
+    },
+    {
+      "rom_offset": "0x18BC0",
+      "name": "NoLFO SD U",
+      "params": [
+        2,
+        25,
+        31,
+        20,
+        206,
+        3,
+        0,
+        7,
+        14,
+        13,
+        18,
+        15,
+        102,
+        17,
+        27,
+        31
+      ]
+    },
+    {
+      "rom_offset": "0x18C00",
+      "name": "Ball1    U",
+      "params": [
+        50,
+        8,
+        29,
+        4,
+        14,
+        17,
+        49,
+        15,
+        25,
+        19,
+        15,
+        105,
+        49,
+        12,
+        31,
+        25
+      ]
+    },
+    {
+      "rom_offset": "0x18C40",
+      "name": "Ball2    U",
+      "params": [
+        2,
+        34,
+        15,
+        23,
+        143,
+        3,
+        0,
+        37,
+        14,
+        13,
+        18,
+        15,
+        100,
+        42,
+        29,
+        26
+      ]
+    },
+    {
+      "rom_offset": "0x18C80",
+      "name": "Ball3    U",
+      "params": [
+        61,
+        39,
+        31,
+        27,
+        0,
+        245,
+        48,
+        41,
+        27,
+        18,
+        192,
+        248,
+        55,
+        32,
+        31,
+        13
+      ]
+    },
+    {
+      "rom_offset": "0x18CC0",
+      "name": "Bachi1   U",
+      "params": [
+        96,
+        7,
+        31,
+        31,
+        15,
+        19,
+        47,
+        7,
+        27,
+        23,
+        210,
+        98,
+        1,
+        16,
+        31,
+        24
+      ]
+    }
+  ],
+  "fm_instruments": [
+    {
+      "rom_offset": "0x1CEF7",
+      "name": "AnaBassED",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1CF37",
+      "name": "MonBassEDT",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1CF77",
+      "name": "NBass",
+      "alg_fb": 6
+    },
+    {
+      "rom_offset": "0x1CFB7",
+      "name": "HonkeyTonk",
+      "alg_fb": 1
+    },
+    {
+      "rom_offset": "0x1CFF7",
+      "name": "FrnchHornE",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D037",
+      "name": "HiHat C6",
+      "alg_fb": 148
+    },
+    {
+      "rom_offset": "0x1D077",
+      "name": "Erepi1",
+      "alg_fb": 21
+    },
+    {
+      "rom_offset": "0x1D0B7",
+      "name": "NSNARE3",
+      "alg_fb": 14
+    },
+    {
+      "rom_offset": "0x1D0F7",
+      "name": "Leed2",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D137",
+      "name": "LeedM",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D177",
+      "name": "Easy Clav",
+      "alg_fb": 8
+    },
+    {
+      "rom_offset": "0x1D1B7",
+      "name": "4thBrass A",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D1F7",
+      "name": "Harpsi1",
+      "alg_fb": 6
+    },
+    {
+      "rom_offset": "0x1D237",
+      "name": "Itamarimba",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D277",
+      "name": "FM HIT   A",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D2B7",
+      "name": "Vibrabelle",
+      "alg_fb": 18
+    },
+    {
+      "rom_offset": "0x1D2F7",
+      "name": "Pianobells",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D337",
+      "name": "SoloViolin",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D377",
+      "name": "PAN",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D3B7",
+      "name": "Brt Guitar",
+      "alg_fb": 4
+    },
+    {
+      "rom_offset": "0x1D3F7",
+      "name": "Hard Brass",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D437",
+      "name": "Brass1",
+      "alg_fb": 1
+    },
+    {
+      "rom_offset": "0x1D477",
+      "name": "PowerBrass",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D4B7",
+      "name": "PowerBr5th",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D4F7",
+      "name": "Celeste",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D537",
+      "name": "HiStrg2 ED",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D577",
+      "name": "SpikeOku1U",
+      "alg_fb": 16
+    },
+    {
+      "rom_offset": "0x1D5B7",
+      "name": "SpikeOku2U",
+      "alg_fb": 14
+    },
+    {
+      "rom_offset": "0x1D5F7",
+      "name": "SpikeOku3U",
+      "alg_fb": 15
+    },
+    {
+      "rom_offset": "0x1D637",
+      "name": "HardBass",
+      "alg_fb": 0
+    },
+    {
+      "rom_offset": "0x1D677",
+      "name": "SpikeOK4 U",
+      "alg_fb": 20
+    },
+    {
+      "rom_offset": "0x1D6B7",
+      "name": "NSNARE6",
+      "alg_fb": 15
+    }
+  ]
+};
